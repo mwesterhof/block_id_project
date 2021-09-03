@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+{% block content %}
+
+{% for content_block in self.content %}
+{% include_block content_block %}
+{% endfor %}
+
+{% endblock content %}
